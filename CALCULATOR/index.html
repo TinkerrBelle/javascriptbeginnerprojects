@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TinkerrBelle Calculator</title>
+        <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  <link href=
+"https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+         rel="stylesheet" integrity=        
+"sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+        crossorigin="anonymous">
+    <script src=
+"https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+           integrity=
+"sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+           crossorigin="anonymous">
+    </script>
+    </head>
+
+    <style>
+        body {
+            padding: 120px 0 0 0 ;
+            line-height: .5em;
+
+
+        }
+
+        #con {
+            border: 1px solid grey;
+            width: 500px;
+            margin: 0 auto;
+
+
+        }
+
+        .cal {
+            width: 500px;
+            margin: 0 auto;
+            border: 1px solid rgb(244, 239, 239);
+            padding: 20px;
+            box-shadow: 1px 1px 10px 1px rgb(249, 222, 222);
+
+
+        }
+
+        .result {
+            border: 3px solid rgb(252, 20, 183);
+            border-radius: 5px 5px 5px 5px;
+            height: 70px;
+            margin: 0 auto;
+            
+        }
+
+        #num {
+            border: 1px solid rgb(197, 192, 192);
+            background: rgb(244, 242, 242);
+            padding: 15px 0 15px 0;
+
+        }
+
+        .card-body {
+            
+           /* border: 1px solid rgb(197, 192, 192);
+            background: rgb(216, 210, 210);*/
+            padding: 25px 0 25px 0;
+            background-color: rgb(247, 241, 241);
+
+
+        }
+
+
+        #equals {
+            height: 287px;
+            background-color: pink;
+            padding-top: 100px;
+        }
+
+        #sum {
+            background-color: pink;
+        }
+
+        .lower {
+            text-align: center;
+            font-size: 24px;
+        }
+
+        #plus,#minus,#times,#divide {
+            background-color: rgb(223, 218, 218);
+        }
+
+    </style>
+    <body>
+        <div class="cal">
+            <div class="result" id="result"></div><br><br><br><br>
+
+            <div class="lower">
+                
+                <div class="row" id="signs">
+                    <div class="col-sm-3" id="sign" name="plus">
+                        <div class="card mb-3" >
+                            <div class="card-body" id="plus">
+                                <div class="card-text">
+                                   <div class="signs"> + </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-3" id="sign" name="minus">
+                        <div class="card mb-3" >
+                            <div class="card-body" id="minus">
+                                <div class="card-text">
+                                    <div class="signs"> - </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-3" id="sign" name="times">
+                        <div class="card mb-3">
+                            <div class="card-body" id="times">
+                                <div class="card-text">
+                                    <div class="signs"> &times; </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-3" id="sign" name="divide">
+                        <div class="card mb-3">
+                            <div class="card-body" id="divide">
+                                <div class="card-text">
+                                    <div class="signs"> &divide; </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    
+                </div><br>
+
+                <div class="row">
+                    <div class="col-sm-9">
+                        <div class="row">
+
+                            <div class="col-sm-4" id="numbers" name="seven">
+                                <div class="card mb-4">
+                                    <div class="card-body">
+                                        <div class="card-text">
+                                            <div class="numbers"> 7 </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+        
+                            <div class="col-sm-4" id="numbers" name="eight">
+                                <div class="card mb-4">
+                                    <div class="card-body">
+                                        <div class="card-text">
+                                            <div class="numbers"> 8 </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+        
+                            <div class="col-sm-4" id="numbers" name="nine">
+                                <div class="card mb-4">
+                                    <div class="card-body">
+                                        <div class="card-text">
+                                            <div class="numbers"> 9 </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+        
+                        </div><br>
+                        
+                        <div class="row">
+
+                            <div class="col-sm-4" id="numbers" name="four">
+                                <div class="card mb-4">
+                                    <div class="card-body">
+                                        <div class="card-text">
+                                            <div class="numbers"> 4 </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+        
+                            <div class="col-sm-4" id="numbers" name="five">
+                                <div class="card mb-4">
+                                    <div class="card-body">
+                                        <div class="card-text">
+                                            <div class="numbers"> 5 </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+        
+                            <div class="col-sm-4" id="numbers" name="six">
+                                <div class="card mb-4">
+                                    <div class="card-body">
+                                        <div class="card-text">
+                                            <div class="numbers"> 6 </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><br>
+    
+                        <div class="row">
+                            
+                            <div class="col-sm-4" id="numbers" name="one">
+                                <div class="card mb-4">
+                                    <div class="card-body">
+                                        <div class="card-text">
+                                            <div class="numbers"> 1 </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+        
+                            <div class="col-sm-4" id="numbers" name="two">
+                                <div class="card mb-4">
+                                    <div class="card-body">
+                                        <div class="card-text">
+                                            <div class="numbers"> 2 </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+        
+                            <div class="col-sm-4" id="numbers" name="three">
+                                <div class="card mb-4">
+                                    <div class="card-body">
+                                        <div class="card-text">
+                                            <div class="numbers"> 3 </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><br>
+    
+                        <div class="row">
+                            <div class="col-sm-4" id="numbers" name="zero">
+                                <div class="card mb-4">
+                                    <div class="card-body">
+                                        <div class="card-text">
+                                            <div class="numbers" > 0 </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+        
+                            <div class="col-sm-4" id="sign" name="dot">
+                                <div class="card mb-4">
+                                    <div class="card-body">
+                                        <div class="card-text">
+                                            <div class="numbers"> . </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+        
+                            <div class="col-sm-4" id="sign" name="clear">
+                                <div class="card mb-4">
+                                    <div class="card-body">
+                                        <div class="card-text">
+                                            <div class="numbers" id="clear"> C </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><br>
+    
+                    </div>
+        
+                    <div class="col-sm-3" >
+                        <div class="card mb-3" id="equals">
+                            <div class="card-body" id="sum">
+                                <div class="card-text">
+                                    <div class="equal" id="equal" > = </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        
+                    </div>
+    
+                </div>
+    
+    
+            </div>
+
+        </div>
+
+
+    </body>
+</html>

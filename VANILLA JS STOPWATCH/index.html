@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <style>
+        body {
+            font-family: "Lucida Handwriting";
+            background-color: rgb(246, 95, 120);
+            color: white;
+            padding-top: 130px;
+            line-height: 1.5em;
+        }
+
+        button {
+            color: white;
+            background: rgb(219, 25, 57);
+            border: 2px solid white;
+            padding: 15px;
+            font-size: 16px;
+            padding: 20px 70px 20px 70px;
+            margin-left: 15px;
+
+        }
+
+        #h1 {
+            font-size: 40px;
+            
+        }
+
+        .header {
+            text-align: center;
+        }
+
+
+        #count {
+            font-size: 100px;
+            color: rgb(189, 20, 49);
+            font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+
+        }
+
+        button {
+            cursor: pointer;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background: pink;
+            color: rgb(219, 25, 57);
+        }
+
+        #by {
+            color: rgb(219, 25, 57); 
+            font-size: 20px;
+        }
+
+
+    </style>
+
+    <body>
+        <div class="header">
+            <p id="count">
+                <span id="seconds"> 00 </span> 
+                :  
+                <span id="tens"> 00 </span> 
+            </p>
+
+            <div class="button">
+                <button id="start"> Start </button>
+                <button id="stop"> Stop </button>
+                <button id="reset"> Reset </button>
+            </div>
+
+            <div class="footer">
+                <p id="h1">
+                    STOPWATCH 
+                    <span id="by"> BY </span>
+                    TINKERRBELLE 
+                </p>
+        
+            </div>
+        </div>
+
+
+    </body>
+
+    <script src="stop.js"></script>
+</html>

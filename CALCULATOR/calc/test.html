@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Addition Function</title>
+</head>
+<body>
+
+<div>
+    <button class="number-btn" data-value="5">5</button>
+    <button class="number-btn" data-value="10">10</button>
+    <button class="number-btn" data-value="3">3</button>
+</div>
+
+<div>
+    <p>Result: <span id="result"></span></p>
+</div>
+
+<script>
+// Set of numbers (you can modify this as needed)
+const numbers = [5, 10, 3];
+
+// Function to add two numbers
+function addNumbers(a, b) {
+    return a + b;
+}
+
+// Add click event listeners to the number buttons
+const numberButtons = document.querySelectorAll('.number-btn');
+numberButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        // Get the two numbers from the data attributes of the clicked button
+        const firstNumber = parseInt(button.dataset.value);
+        
+        // For this example, let's add the firstNumber with the second number in the array
+        const secondNumber = numbers[0]; // Modify this index as needed
+        
+        // Perform the addition using the addNumbers function
+        const sum = addNumbers(firstNumber, secondNumber);
+        
+        // Display the result
+        document.getElementById('result').innerText = sum;
+    });
+});
+</script>
+
+</body>
+</html>
